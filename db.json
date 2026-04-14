@@ -1,0 +1,26 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "iPhone 14",
+            "price": 80000,
+            "category": "electronics",
+            "image": "https://via.placeholder.com/150"
+        },
+        {
+            "id": 2,
+            "title": "Nike Shoes",
+            "price": 5000,
+            "category": "fashion",
+            "image": "https://via.placeholder.com/150"
+        },
+        {
+            "id": 3,
+            "title": "Laptop",
+            "price": 70000,
+            "category": "electronics",
+            "image": "https://via.placeholder.com/150"
+        }
+    ],
+    "cart": []
+}
