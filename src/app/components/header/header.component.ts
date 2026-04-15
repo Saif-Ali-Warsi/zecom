@@ -16,7 +16,11 @@ export class HeaderComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
 
-
+  logout() {
+    this.cartService.clearCart();
+    localStorage.removeItem('auth_token');
+    location.reload();
+  }
 
   ngOnInit() {
     this.cartService.getCartCount().subscribe(count => {
