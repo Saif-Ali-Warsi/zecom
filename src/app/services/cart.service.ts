@@ -34,7 +34,7 @@ export class CartService {
     if (existingItem) {
       updatedCart = currentCart.map(item =>
         item.id === product.id
-          ? { ...item, quantity: (item.quantity || 1) + 1 }
+          ? { ...item, quantity: (item.quantity ?? 1) + 1 }
           : item
       );
     } else {
@@ -60,8 +60,15 @@ export class CartService {
 
   getCartCount() {
     return this.cart$.pipe(
-      map(items => items.length)
-    )
+      map(items =>
+        items.reduce((total, item) => total + item.quantity, 0)
+      )
+    );
+  }
+
+  clearCart() {
+    this.cartSubject.next([]);
+    this.saveToStorage([]);
   }
 
   removeFromCart(product: Product) {
@@ -78,6 +85,8 @@ export class CartService {
   getCartItems() {
     return this.cart$;
   }
+
+
 
 
 }

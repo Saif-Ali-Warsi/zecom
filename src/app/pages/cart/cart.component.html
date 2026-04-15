@@ -1,12 +1,23 @@
-<div *ngFor="let item of cartItems">
-  <h3>{{ item.title }}</h3>
-  <p>{{ item.price }}</p>
+<div *ngIf="cartItems.length > 0; else emptyCart">
+  <div *ngFor="let item of cartItems">
+    <h3>{{ item.title }}</h3>
+    <p>₹ {{ item.price }}</p>
 
-  <button (click)="decrease(item)">-</button>
-  <span class="count">{{ item.quantity }}</span>
-  <button (click)="increase(item)">+</button>
+    <button (click)="decrease(item)" [disabled]="item.quantity === 1">-</button>
+    <span class="count">{{ item.quantity }}</span>
+    <button (click)="increase(item)">+</button>
 
-  <button (click)="remove(item)">Remove</button>
+    <button (click)="remove(item)">Remove</button>
+
+    <p>Subtotal: ₹ {{ item.price * item.quantity }}</p>
+  </div>
+
+  <h3>Total: ₹ {{ getTotalPrice() }}</h3>
+
+  <button (click)="clearCart()">Clear Cart</button>
 </div>
-<h3>Total: {{ getTotalPrice() }}</h3>
-<p *ngIf="cartItems.length === 0">Cart is empty</p>
+
+<ng-template #emptyCart>
+  <h3>Your cart is empty 🛒</h3>
+  <a routerLink="/">Go Shopping</a>
+</ng-template>
