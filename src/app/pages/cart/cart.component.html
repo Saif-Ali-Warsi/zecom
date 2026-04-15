@@ -1,0 +1,12 @@
+<div *ngFor="let item of cartItems">
+  <h3>{{ item.title }}</h3>
+  <p>{{ item.price }}</p>
+
+  <button (click)="decrease(item)">-</button>
+  <span class="count">{{ item.quantity }}</span>
+  <button (click)="increase(item)">+</button>
+
+  <button (click)="remove(item)">Remove</button>
+</div>
+<h3>Total: {{ getTotalPrice() }}</h3>
+<p *ngIf="cartItems.length === 0">Cart is empty</p>

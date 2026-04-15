@@ -1,5 +1,19 @@
+<input
+  type="text"
+  placeholder="search products..."
+  (input)="onSearch($event)"
+/>
+
+<select (change)="onCategoryChange($event)">
+  <option value="">All</option>
+  <option value="electronics">Electronics</option>
+  <option value="fashion">Fashion</option>
+</select>
+
 <div *ngFor="let product of products">
   <h3>{{ product.title }}</h3>
   <p>{{ product.price }}</p>
   <p>{{ product.category }}</p>
+
+  <button (click)="addToCart(product)">Add to Cart</button>
 </div>

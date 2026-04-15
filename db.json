@@ -2,24 +2,27 @@
     "products": [
         {
             "id": 1,
-            "title": "iPhone 14",
+            "title": "iphone 14",
             "price": 80000,
             "category": "electronics",
-            "image": "https://via.placeholder.com/150"
+            "image": "https://placehold.co/150x150.png",
+            "quantity": 0
         },
         {
             "id": 2,
-            "title": "Nike Shoes",
+            "title": "nike shoes",
             "price": 5000,
             "category": "fashion",
-            "image": "https://via.placeholder.com/150"
+            "image": "https://placehold.co/150x150.png",
+            "quantity": 0
         },
         {
             "id": 3,
-            "title": "Laptop",
+            "title": "laptop",
             "price": 70000,
             "category": "electronics",
-            "image": "https://via.placeholder.com/150"
+            "image": "https://placehold.co/150x150.png",
+            "quantity": 0
         }
     ],
     "cart": []
