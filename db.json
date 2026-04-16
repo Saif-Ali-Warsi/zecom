@@ -1,0 +1,10 @@
+{
+    "warehouses": [
+        {
+            "id": 1,
+            "name": "Main Warehouse",
+            "location": "Pune",
+            "capacity": 1000
+        }
+    ]
+}
