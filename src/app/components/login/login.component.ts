@@ -24,7 +24,17 @@ export class LoginComponent {
     const success = this.authService.login(this.username, this.password);
 
     if (success) {
-      this.router.navigate(['/']);
+
+      const redirectUrl = this.authService.getRedirectUrl();
+
+      if (redirectUrl) {
+        this.router.navigate([redirectUrl]);
+        this.authService.clearRedirectUrl();
+      } else {
+        this.router.navigate(['/']);
+      }
+
+
     } else {
       this.error = 'Invalid credentials';
     }

@@ -7,6 +7,8 @@ export class AuthService {
 
   private tokenKey = 'auth_token';
 
+  private redirectUrl: string | null = null;
+
   login(username: string, password: string) {
     if (username === 'star' && password === 'admin') {
       const fakeToken = 'my-fake-jwt-token';
@@ -26,6 +28,18 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return !!this.getToken();
+  }
+
+  setRedirectUrl(url: string) {
+    this.redirectUrl = url;
+  }
+
+  getRedirectUrl() {
+    return this.redirectUrl;
+  }
+
+  clearRedirectUrl() {
+    this.redirectUrl = null;
   }
 
 

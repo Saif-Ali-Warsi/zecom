@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,6 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent)
+        loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent), canActivate: [LoginGuard]
     }
 ];
