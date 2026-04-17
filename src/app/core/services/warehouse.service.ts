@@ -14,4 +14,8 @@ export class WarehouseService {
   getWarehouses() {
     return this.http.get<Warehouse[]>(this.baseUrl);
   }
+
+  addWarehouse(data: Warehouse) {
+    return this.http.post(this.baseUrl, data)
+  }
 }

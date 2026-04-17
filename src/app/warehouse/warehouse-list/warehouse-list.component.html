@@ -1,1 +1,7 @@
-<p>warehouse-list works!</p>
+<div class="main-container">
+  <div *ngFor="let warehouse of warehouses" class="card">
+    <h3>{{ warehouse.name }}</h3>
+    <p>Location: {{ warehouse.location }}</p>
+    <p>Capacity: {{ warehouse.capacity }}</p>
+  </div>
+</div>

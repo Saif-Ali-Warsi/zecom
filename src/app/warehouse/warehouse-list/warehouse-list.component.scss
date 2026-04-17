@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  width: 20%;
+  border: 1px solid;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}

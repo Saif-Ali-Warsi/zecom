@@ -1,1 +1,7 @@
-<p>warehouse-form works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input type="text" formControlName="name" placeholder="Name" />
+  <input type="text" formControlName="location" placeholder="Location" />
+  <input type="number" formControlName="capacity" placeholder="Capacity" />
+
+  <button type="submit">Save</button>
+</form>
