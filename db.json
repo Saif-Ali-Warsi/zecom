@@ -1,22 +1,70 @@
 {
   "warehouses": [
     {
-      "id": "1",
-      "name": "Main Warehouse",
-      "location": "Pune",
-      "capacity": 1000
+      "id": "Nh-r9nxGKVE",
+      "name": "GTFD54",
+      "location": "Hadapsar",
+      "capacity": 100
     },
     {
-      "id": "RJUs8YK3K9g",
-      "name": "ssas",
-      "location": "saas",
+      "id": "kSRakKlvvQA",
+      "name": "HYU765",
+      "location": "Magarpatta",
+      "capacity": 50
+    },
+    {
+      "id": "3tfC_CjqT64",
+      "name": "KLUI87",
+      "location": "Kalyani Nagar",
+      "capacity": 20
+    },
+    {
+      "id": "N9XWI4Qv4Oo",
+      "name": "UYT67Q",
+      "location": "Kothrud",
       "capacity": 10
     },
     {
-      "id": "CYB6SWkzmRc",
-      "name": "GT453",
-      "location": "Pune",
-      "capacity": 500
+      "id": "QQgNi9wPTXU",
+      "name": "JKIU87Q",
+      "location": "Baner",
+      "capacity": 70
+    },
+    {
+      "id": "nJKh5pNb7h4",
+      "name": "ZAS64U",
+      "location": "Aundh",
+      "capacity": 40
+    },
+    {
+      "id": "yJSXdTrV24U",
+      "name": "",
+      "location": "",
+      "capacity": 0
+    },
+    {
+      "id": "b4cxL8z82_g",
+      "name": "",
+      "location": "",
+      "capacity": 0
+    },
+    {
+      "id": "g6xO12laaHM",
+      "name": "",
+      "location": "",
+      "capacity": 0
+    },
+    {
+      "id": "O0U31vmKoOE",
+      "name": "",
+      "location": "",
+      "capacity": 0
+    },
+    {
+      "id": "uSbpttUClsY",
+      "name": "",
+      "location": "",
+      "capacity": 0
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

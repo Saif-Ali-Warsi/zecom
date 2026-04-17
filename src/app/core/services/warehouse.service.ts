@@ -15,7 +15,19 @@ export class WarehouseService {
     return this.http.get<Warehouse[]>(this.baseUrl);
   }
 
+  getWarehouseById(id: string) {
+    return this.http.get<Warehouse>(`${this.baseUrl}/${id}`);
+  }
+
   addWarehouse(data: Warehouse) {
-    return this.http.post(this.baseUrl, data)
+    return this.http.post(this.baseUrl, data);
+  }
+
+  updateWarehouse(id: string, data: Warehouse) {
+    return this.http.put(`${this.baseUrl}/${id}`, data)
+  }
+
+  deleteWarehouse(id: string) {
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 }

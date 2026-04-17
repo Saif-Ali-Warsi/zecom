@@ -3,5 +3,13 @@
     <h3>{{ warehouse.name }}</h3>
     <p>Location: {{ warehouse.location }}</p>
     <p>Capacity: {{ warehouse.capacity }}</p>
+
+    <div class="actions">
+      <button [routerLink]="['/warehouse/edit', warehouse.id]">Edit</button>
+
+      <button (click)="deleteWarehouse(warehouse.id)">Delete</button>
+    </div>
   </div>
+
+  <div *ngIf="warehouses.length === 0">No warehouses found 🚫</div>
 </div>

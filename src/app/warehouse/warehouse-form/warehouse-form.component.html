@@ -1,7 +1,32 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <input type="text" formControlName="name" placeholder="Name" />
-  <input type="text" formControlName="location" placeholder="Location" />
-  <input type="number" formControlName="capacity" placeholder="Capacity" />
+  <div class="form-field">
+    <input type="text" formControlName="name" placeholder="Name" />
+    <p
+      class="error"
+      *ngIf="form.controls.name.touched && form.controls.name.invalid"
+    >
+      Name is required
+    </p>
+  </div>
+  <div class="form-field">
+    <input type="text" formControlName="location" placeholder="Location" />
+    <p
+      class="error"
+      *ngIf="form.controls.location.touched && form.controls.location.invalid"
+    >
+      Location is required
+    </p>
+  </div>
+
+  <div class="form-field">
+    <input type="number" formControlName="capacity" placeholder="Capacity" />
+    <p
+      class="error"
+      *ngIf="form.controls.capacity.touched && form.controls.capacity.invalid"
+    >
+      Capacity must be greater than 0
+    </p>
+  </div>
 
   <button type="submit">Save</button>
 </form>
