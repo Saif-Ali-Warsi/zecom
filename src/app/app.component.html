@@ -1,4 +1,6 @@
-<div *ngIf="loaderService.loading$ | async">Loading...</div>
+<div class="loading" *ngIf="loaderService.loading$ | async">
+  <span>Loading...</span>
+</div>
 
 <a routerLink="/warehouse/add">Add warehouse</a> |
 <a routerLink="/warehouses">Warehouses</a> |
