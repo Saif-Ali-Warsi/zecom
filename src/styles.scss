@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  color: white;
+  background-color: #262e2e;
+}
+
+a {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: aqua;
+  padding: 5px 8px;
+  border: 1px solid aqua;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+hr {
+  margin: 15px 0 15px;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 13px;
+  color: aqua;
+  padding: 5px 8px;
+  border: 1px solid aqua;
+  background: none;
+  margin-right: 10px;
+}
