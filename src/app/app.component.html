@@ -1,3 +1,5 @@
+<div *ngIf="loaderService.loading$ | async">Loading...</div>
+
 <a routerLink="/warehouse/add">Add warehouse</a> |
 <a routerLink="/warehouses">Warehouses</a> |
 <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
