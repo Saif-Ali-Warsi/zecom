@@ -4,6 +4,10 @@
   gap: 15px;
 }
 
+.search-bar {
+  width: calc(100% - 12px);
+}
+
 .card {
   width: calc(20% - 34px);
   border: 1px solid;

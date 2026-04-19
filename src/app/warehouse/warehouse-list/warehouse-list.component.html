@@ -1,3 +1,10 @@
+<input
+  class="search-bar"
+  type="text"
+  placeholder="Search warehouses"
+  (input)="onSearch($event)"
+/>
+<hr />
 <div class="main-container">
   <div *ngFor="let warehouse of warehouses" class="card">
     <h3>{{ warehouse.name }}</h3>
