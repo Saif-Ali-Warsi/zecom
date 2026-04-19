@@ -13,14 +13,16 @@ a {
 }
 
 button {
+  font-size: 12px;
   cursor: pointer;
-  padding: 4px 5px;
+  padding: 4px 8px;
   height: 30px;
   color: aqua;
   display: block;
   background-color: #262e2e;
   border: 1px solid aqua;
   margin: 10px 0;
+  border-radius: 8px;
 }
 
 input {

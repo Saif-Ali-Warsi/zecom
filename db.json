@@ -37,34 +37,10 @@
       "capacity": 40
     },
     {
-      "id": "yJSXdTrV24U",
-      "name": "",
-      "location": "",
-      "capacity": 0
-    },
-    {
-      "id": "b4cxL8z82_g",
-      "name": "",
-      "location": "",
-      "capacity": 0
-    },
-    {
-      "id": "g6xO12laaHM",
-      "name": "",
-      "location": "",
-      "capacity": 0
-    },
-    {
-      "id": "O0U31vmKoOE",
-      "name": "",
-      "location": "",
-      "capacity": 0
-    },
-    {
-      "id": "uSbpttUClsY",
-      "name": "",
-      "location": "",
-      "capacity": 0
+      "id": "Y4xremK4Dts",
+      "name": "BHGV98",
+      "location": "Koregao Park",
+      "capacity": 60
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

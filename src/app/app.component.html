@@ -1,5 +1,6 @@
 <a routerLink="/warehouse/add">Add warehouse</a> |
 <a routerLink="/warehouses">Warehouses</a> |
-<a routerLink="/login">Login</a>
+<a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+<a class="logout" (click)="logout()" *ngIf="isLoggedIn()">Logout</a>
 <hr />
 <router-outlet></router-outlet>
