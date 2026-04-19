@@ -41,6 +41,12 @@
       "name": "BHGV98",
       "location": "Koregao Park",
       "capacity": 60
+    },
+    {
+      "id": "E5hU2ioa6qE",
+      "name": "DGJBD12",
+      "location": "Hinjewadi",
+      "capacity": 10
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
