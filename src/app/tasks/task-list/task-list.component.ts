@@ -4,6 +4,8 @@ import { TaskService } from '../../core/services/task.service';
 import { RouterLink } from '@angular/router';
 import { Task } from '../../core/models/task.model';
 import { TaskItemComponent } from '../task-item/task-item.component';
+import { debounceTime, distinctUntilChanged, switchMap, map } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 
 
@@ -18,11 +20,38 @@ export class TaskListComponent implements OnInit {
 
   tasks: Task[] = [];
 
+  search$ = new Subject<string>();
+
   constructor(private taskService: TaskService) { }
 
 
   ngOnInit() {
     this.loadTasks();
+
+    this.search$.pipe(
+
+      debounceTime(300),//User types fast → only last value processed
+
+      distinctUntilChanged(),//"task" → "task" → ignored
+
+      switchMap((searchTerm) => {
+        return this.taskService.getTasks().pipe(
+          map(tasks => {
+            if (!searchTerm) return tasks;
+            return tasks.filter(t => t.title.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+          })
+        );
+      })
+
+    ).subscribe((data) => {
+      this.tasks = data;
+    })
+  }
+
+  onSearch(event: any) {
+    const value = event.target.value;
+    this.search$.next(value); //Push new value into stream
   }
 
 

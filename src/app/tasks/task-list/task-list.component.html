@@ -2,7 +2,10 @@
 
 <hr />
 
-<div *ngIf="tasks.length === 0">No Tasks Available</div>
+<input type="text" placeholder="Search tasks..." (input)="onSearch($event)" />
+<hr />
+
+<div class="empty-state" *ngIf="tasks.length === 0">No Tasks Available</div>
 
 <div class="tasks">
   <app-task-item
