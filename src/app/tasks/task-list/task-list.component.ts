@@ -49,6 +49,10 @@ export class TaskListComponent implements OnInit {
     })
   }
 
+  trackById(index: number, item: Task) {
+    return item.id;
+  }
+
   onSearch(event: any) {
     const value = event.target.value;
     this.search$.next(value); //Push new value into stream

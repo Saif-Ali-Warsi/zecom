@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Task } from '../../core/models/task.model';
+
 
 
 
@@ -10,7 +11,8 @@ import { Task } from '../../core/models/task.model';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './task-item.component.html',
-  styleUrl: './task-item.component.scss'
+  styleUrl: './task-item.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TaskItemComponent {
 
