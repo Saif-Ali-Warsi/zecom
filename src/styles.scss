@@ -19,7 +19,17 @@ hr {
 }
 
 input {
+  color: aqua;
   padding: 10px;
+  background: none;
+  border: 1px solid aqua;
+}
+
+select {
+  color: aqua;
+  padding: 10px;
+  background: none;
+  border: 1px solid aqua;
 }
 
 button {

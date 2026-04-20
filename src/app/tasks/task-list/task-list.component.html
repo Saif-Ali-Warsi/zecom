@@ -4,11 +4,13 @@
 
 <div *ngIf="tasks.length === 0">No Tasks Available</div>
 
-<div *ngFor="let task of tasks" class="card">
-  <h3>{{ task.title }}</h3>
-  <p>{{ task.description }}</p>
-  <p>Status: {{ task.status }}</p>
+<div class="tasks">
+  <div *ngFor="let task of tasks" class="card">
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <p>Status: {{ task.status }}</p>
 
-  <button [routerLink]="['/task/edit', task.id]">EDIT</button>
-  <button (click)="deleteTask(task.id)">DELETE</button>
+    <button [routerLink]="['/task/edit', task.id]">EDIT</button>
+    <button (click)="deleteTask(task.id)">DELETE</button>
+  </div>
 </div>

@@ -1,1 +1,29 @@
-<p>task-form works!</p>
+<h4>{{ isEdit ? "Edit Task" : "Add Task" }}</h4>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input type="text" formControlName="title" placeholder="Title" />
+  <p
+    class="error"
+    *ngIf="form.controls.title.touched && form.controls.title.invalid"
+  >
+    Title is required
+  </p>
+
+  <input type="text" formControlName="description" placeholder="Description" />
+  <p
+    class="error"
+    *ngIf="form.controls.description.touched && form.controls.title.invalid"
+  >
+    Description is required
+  </p>
+
+  <select formControlName="status">
+    <option value="todo">Todo</option>
+    <option value="in-progress">In Progress</option>
+    <option value="done">Done</option>
+  </select>
+
+  <button type="submit">
+    {{ isEdit ? "Update" : "Create" }}
+  </button>
+</form>

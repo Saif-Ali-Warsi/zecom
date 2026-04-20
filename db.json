@@ -1,17 +1,30 @@
 {
-    "tasks": [
-        {
-            "id": "1",
-            "title": "Learn Angular",
-            "description": "Study RxJS deeply",
-            "status": "todo"
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "admin"
-        }
-    ]
+  "tasks": [
+    {
+      "id": "1",
+      "title": "HGB97",
+      "description": "Study RxJS deeply",
+      "status": "todo"
+    },
+    {
+      "id": "OuZ06k8bbj0",
+      "title": "RFDG7",
+      "description": "revise learning every day",
+      "status": "in-progress"
+    },
+    {
+      "id": "ljWDgisHUSI",
+      "title": "YGFC09",
+      "description": "drink plenty of water",
+      "status": "done"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

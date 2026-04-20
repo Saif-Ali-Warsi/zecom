@@ -24,7 +24,7 @@ export class TaskService {
   }
 
   updateTask(id: string, task: Task) {
-    return this.http.put(this.baseUrl, task);
+    return this.http.put(`${this.baseUrl}/${id}`, task);
   }
 
   deleteTask(id: string) {

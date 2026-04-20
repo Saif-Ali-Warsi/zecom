@@ -1,0 +1,22 @@
+h4 {
+  color: aqua;
+}
+
+form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.error {
+  color: #e59a9a;
+}
