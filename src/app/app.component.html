@@ -1,6 +1,11 @@
+<div class="loading" *ngIf="loader.loading$ | async">
+  <span>Loading...</span>
+</div>
+
 <hr />
 <a routerLink="/tasks">Tasks</a> | <a routerLink="task/add">Add Task</a> |
-<a routerLink="/login">Login</a>
+<a *ngIf="!isLoggedIn()" routerLink="/login">Login</a>
+<a *ngIf="isLoggedIn()" class="logout" (click)="logout()">Logout</a>
 
 <hr />
 

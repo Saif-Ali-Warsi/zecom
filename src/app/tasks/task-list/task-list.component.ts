@@ -20,6 +20,8 @@ export class TaskListComponent implements OnInit {
 
   tasks: Task[] = [];
 
+  isLoaded = false;
+
   search$ = new Subject<string>();
 
   constructor(private taskService: TaskService) { }
@@ -60,8 +62,11 @@ export class TaskListComponent implements OnInit {
 
 
   loadTasks() {
+    this.isLoaded = false;
+
     this.taskService.getTasks().subscribe((data) => {
-      this.tasks = data
+      this.tasks = data;
+      this.isLoaded = true;
     })
   }
 
