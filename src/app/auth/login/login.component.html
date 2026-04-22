@@ -1,6 +1,23 @@
 <form [formGroup]="form" (ngSubmit)="login()">
-  <input formControlName="username" placeholder="Username" />
-  <input formControlName="password" type="password" placeholder="Password" />
+  <div class="form-field">
+    <input formControlName="username" placeholder="Username" />
+    <p
+      *ngIf="form.controls.username.touched && form.controls.username.invalid"
+      class="error"
+    >
+      Username is required
+    </p>
+  </div>
+
+  <div class="form-field">
+    <input formControlName="password" type="password" placeholder="Password" />
+    <p
+      *ngIf="form.controls.password.touched && form.controls.password.invalid"
+      class="error"
+    >
+      Password is required
+    </p>
+  </div>
 
   <button type="submit">Login</button>
 
